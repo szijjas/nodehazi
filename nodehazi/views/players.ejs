@@ -1,0 +1,59 @@
+<%- include('header') %>
+
+<div class="background">
+    <div class="content">
+        <h2>Players <i class="fas fa-basketball-ball"></i></h2>
+
+        <table class="table">
+            <thead class="thead-dark">
+            <tr>
+                <th scope="col">Name</th>
+                <th scope="col">POS</th>
+                <th scope="col">PPG</th>
+                <th scope="col">APG</th>
+                <th scope="col">RPG</th>
+                <th scope="col">Age</th>
+                <th scope="col">Team</th>
+                <th scope="col">Modify</th>
+            </tr>
+            </thead>
+            <tbody>
+            <% players.forEach(function(player){ %>
+                <tr>
+                    <td>
+                        <%= player.name %>
+                    </td>
+                    <td>
+                        <%= player.position %>
+                    </td>
+                    <td>
+                        <%= player.point %>
+                    </td>
+                    <td>
+                        <%= player.assist %>
+                    </td>
+                    <td>
+                        <%= player.rebound %>
+                    </td>
+                    <td>
+                        <%= player.age %>
+                    </td>
+                    <td>
+                        <%= player._team %>
+                    </td>
+                    <td style="width:30px;white-space: nowrap">
+                        <a href="/player/edit<%= player._id %>" class="btn btn-sm btn-primary"><i
+                                    class="far fa-edit"></i></a>
+                        <a href="/player/del<%= player._id %>" class="btn btn-sm btn-danger"><i
+                                    class="far fa-trash-alt"></i></a>
+                    </td>
+                </tr>
+            <% }); %>
+            </tbody>
+        </table>
+        <br>
+        <a href="/player/new" class="btn btn-block btn-primary">New player</a>
+    </div>
+</div>
+
+<%- include('footer') -%>

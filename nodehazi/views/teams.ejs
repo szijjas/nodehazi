@@ -1,0 +1,43 @@
+<%- include('header') %>
+
+<div class="background">
+    <div class="content">
+        <h2>Teams <i class="fas fa-basketball-ball"></i></h2>
+
+        <table class="table">
+            <thead class="thead-dark">
+            <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Abbreviation</th>
+                <th scope="col">Founded</th>
+                <th scope="col">City</th>
+                <th scope="col">Championships</th>
+            </tr>
+            </thead>
+            <tbody>
+            <% teams.forEach(function(team){ %>
+                <tr>
+                    <td>
+                        <%= team.name %>
+                    </td>
+                    <td>
+                        <%= team.abbreviation %>
+                    </td>
+                    <td>
+                        <%= team.founded %>
+                    </td>
+                    <td>
+                        <%= team.city %>
+                    </td>
+                    <td>
+                        <%= team.champ %>
+                    </td>
+                </tr>
+            <% }); %>
+            </tbody>
+        </table>
+    </div>
+</div>
+</div>
+
+<%- include('footer') -%>

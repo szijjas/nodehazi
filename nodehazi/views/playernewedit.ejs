@@ -1,0 +1,41 @@
+<%- include('header')%>
+
+<div class="background">
+    <div id="newpldiv">
+        <h4>Register new player</h4>
+        <form action="" id="newplayer">
+            <div class="form-group">
+                <label for="newname"></label><input type="text" class="form-control" id="newname" placeholder="Player name">
+            </div>
+            <div class="form-group">
+                <label for="newpos"></label>
+                <select type="text" class="form-control" id="newpos" placeholder="Position">
+                    <option value="pg">Point guard</option>
+                    <option value="sg">Shooting guard</option>
+                    <option value="pf">Power forward</option>
+                    <option value="sf">Shooting forward</option>
+                    <option value="c">Center</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="newppg"></label><input type="number" class="form-control" id="newppg" placeholder="Points per game">
+            </div>
+            <div class="form-group">
+                <label for="newapg"></label><input type="number" class="form-control" id="newapg" placeholder="Assists per game">
+            </div>
+            <div class="form-group">
+                <label for="newrpg"></label><input type="number" class="form-control" id="newrpg" placeholder="Rebounds per game">
+            </div>
+            <div class="form-group">
+                <label for="newage"></label><input type="number" class="form-control" id="newage" placeholder="Age">
+            </div>
+            <div class="form-group">
+                <label for="newteam"></label><input type="text" class="form-control" id="newteam" placeholder="Team">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</div>
+
+
+<%- include('footer')%>
